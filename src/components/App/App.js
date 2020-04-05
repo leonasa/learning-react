@@ -16,11 +16,16 @@ rating: 4.5,
 reviewCount: 90
 };
 
+function searchYelp(term, location, sortBy){
+  console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+}
+
 function App() {
+  
   return (
     <div class="App">
   <h1>ravenous</h1>
-  <SearchBar/>
+  <SearchBar  searchYelp={searchYelp} />
   <BusinessList businesses={ [business,business,business,business,business,business,business,business] }/>
 </div>
   );
